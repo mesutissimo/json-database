@@ -51,4 +51,9 @@ const insert = (data, table, options = { upsert: true }) => {
   return success;
 };
 
-module.exports = { insert };
+const select = (table) => {
+  const tableData = readDb(table);
+  return tableData
+};
+
+module.exports = { select, insert };
